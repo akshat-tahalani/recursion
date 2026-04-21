@@ -12,33 +12,17 @@ class Solution:
 
         ans = []
         word = []
-        new = ''
+        new = []
+        yo = ''
 
-        for  i in words :
-            for char in i :
-                if char == separator  :
-                    
-                    if ans:
-                        new ="".join(ans)
-                        word.append(new)
-                        ans = []
-                        
+        for i in words:
+            new = i.split(separator)
+            filtered = [item for item in new if item != ""]
 
-                else : ans.append(char)
-            if ans :
-                new = "".join(ans)
-                word.append(new)
-                ans=[]
 
+            word.extend(filtered)
             
-            
-            
-        
-            
-        
-        
-       
-        
+
         return word
             
         
